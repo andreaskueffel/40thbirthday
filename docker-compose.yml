@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  webserver:
+    container_name: 40thbirthday
+    image: nginx:latest
+    ports:
+      - 8040:80
+    restart: always
+    volumes:
+      - ./conf/:/etc/nginx/conf.d/:ro
+      - ./www:/var/www/:ro
