@@ -15,19 +15,20 @@ namespace _40thBackend
             builder.Services.AddSwaggerGen();
 
             var app = builder.Build();
-
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            app.UseMiddleware<VisitorCounterMiddleware>();
             app.UseAuthorization();
 
 
             app.MapControllers();
-
+            app.UseStaticFiles();
+            app.UseDefaultFiles();
+            app.MapFallbackToPage("/index.html");
             app.Run();
         }
     }
