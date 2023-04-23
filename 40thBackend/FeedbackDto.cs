@@ -2,6 +2,7 @@
 {
     public class FeedbackDto
     {
+        public long Id { get; set; }
         public DateTime Timestamp { get; set; } 
         public string? Name { get; set; }
         public string? Phone { get; set; }

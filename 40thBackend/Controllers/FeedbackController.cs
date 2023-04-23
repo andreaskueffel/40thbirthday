@@ -28,15 +28,15 @@ namespace _40thBackend.Controllers
         public ActionResult<IEnumerable<FeedbackDto>> Index()
         {
             return new ActionResult<IEnumerable<FeedbackDto>>(_dbcontext.DB.GetCollection<FeedbackDto>().FindAll());
-            
-            //return new CreatedAtActionResult(nameof(Post), nameof(FeedbackController), null, null); 
         }
+
         [HttpGet("visits")]
         public ActionResult<IEnumerable<VisitorInfo>> Visits()
         {
-            return new ActionResult<IEnumerable<VisitorInfo>>(_dbcontext.DB.GetCollection<VisitorInfo>().FindAll());
-
-            //return new CreatedAtActionResult(nameof(Post), nameof(FeedbackController), null, null); 
+            var visInfo = _dbcontext.DB.GetCollection<VisitorInfo>().FindAll();
+            var list = visInfo.ToList();
+            
+            return new ActionResult<IEnumerable<VisitorInfo>>(list);
         }
     }
 }

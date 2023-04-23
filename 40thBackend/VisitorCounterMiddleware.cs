@@ -17,6 +17,7 @@
             {
                 VisitorInfo visitorInfo = VisitorInfo.FromHttpContext(context);
                 dbContext.DB.GetCollection<VisitorInfo>().Insert(visitorInfo);
+
             }
             catch (Exception ex)
             {
