@@ -11,6 +11,7 @@ namespace _40thBackend
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+            builder.Services.AddSingleton<LiteDBContext>();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -24,11 +25,11 @@ namespace _40thBackend
             app.UseMiddleware<VisitorCounterMiddleware>();
             app.UseAuthorization();
 
-
+            app.UsePathBase("/40");
             app.MapControllers();
             app.UseStaticFiles();
             app.UseDefaultFiles();
-            app.MapFallbackToPage("/index.html");
+            app.MapFallbackToFile("/index.html");
             app.Run();
         }
     }
