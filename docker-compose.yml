@@ -1,12 +1,11 @@
 version: '3'
 
 services:
-  webserver:
+  backend:
     container_name: 40thbirthday
-    image: nginx:latest
+    image: 40thbirthday:latest
     ports:
       - 8040:80
     restart: always
     volumes:
-      - ./conf/:/etc/nginx/conf.d/:ro
-      - ./www:/var/www/:ro
+      - ./data:/app/data/
