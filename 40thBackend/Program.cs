@@ -14,19 +14,21 @@ namespace _40thBackend
             builder.Services.AddSingleton<LiteDBContext>();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-
+            builder.Logging.SetMinimumLevel(LogLevel.Debug);
             var app = builder.Build();
+            
             // Configure the HTTP request pipeline.
+            app.UsePathBase("/40/");
+            app.UseRouting();
             if (app.Environment.IsDevelopment())
             {
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
             app.UseMiddleware<VisitorCounterMiddleware>();
-            app.UseAuthorization();
-
-            app.UsePathBase("/40");
+            
             app.MapControllers();
+            
             app.UseStaticFiles();
             app.UseDefaultFiles();
             app.MapFallbackToFile("/index.html");

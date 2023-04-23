@@ -12,132 +12,152 @@
 
 <body>
   <div class="bg-dark text-white" >
-  <div style=" margin-left:1vh;margin-right: 1vh;">
+  <div style=" margin-left:1vh;margin-right: 1vh">
+
+      <div class="row">
+          <p></p>
+          <!--<div class="bg-image" style="background-image: url('ich.png');  height: 50vh; text-align: center">-->
 
 
-    <div class="row">
-    <!--<div class="bg-image" style="background-image: url('ich.png');  height: 50vh; text-align: center">-->
-      <h4 style="text-align: left;">Andreas wird...</h4>
-      
-    <div style="text-align: center">
-      <img class="img" src="img/IMG-20160306-WA0001.jpg" style="height: 25vh;" alt="Bild von Andreas">
-      <br>
-      <h1 style="color: white; font-size:8vw;">...40</h1>
-      <br>
-      <h1 style="color: white; font-size:6vw; z-index:1;margin-top: 5vh">Einladung</h1>
-      <p style="margin-top:0vh"></p>
-    </div>
-    <div class="row">
-    <p>Am 11.06. werde ich 40 Jahre alt!</p>
-    <p>Die Feier findet am 24.06.2023 ab 18 Uhr auf dem Eichenberg statt.</p>
-      </div>
-    <div class="row">
-      <div class="col-md-2">
-        <b>Wann?</b>
-        <br>
-      </div>
-      <div class="col-md-4">
-        <p>
-          24.06.2023 ab 18:00 Uhr
-        </p>
-        <p id="countdown"></p>
-      </div>
-    </div>
-    <br>
-    <div class="row">
-      <div class="col-md-2">
-        <b>Wo?</b>
-        <br>
-      </div>
-      <div class="col-md-4">
-        Grillhütte Eichenberg<br>Netra
-        <br>
-        <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=10.076222419738771%2C51.07457159156011%2C10.145444869995119%2C51.098132188677035&amp;layer=mapnik&amp;marker=51.086353390250736%2C10.110855102539062"
-          style="border: 1px solid black"></iframe>
-        <br />
-        <small>
-          <a href="https://www.openstreetmap.org/?mlat=51.0864&amp;mlon=10.1109#map=15/51.0864/10.1108"
-            class="btn btn-primary">Karte Öffnen</a>
-          <a href="https://www.ringgau.de/wohnen-leben/grillplaetze" class="btn btn-primary">Grillplaetze Ringgau</a>
-        </small>
-      </div>
-    </div>
-    <br>
+          <div style="text-align: center">
+              <img class="img" src="img/IMG-20160306-WA0001.jpg" style="height: 25vh;" alt="Bild von Andreas">
+              <h4 style="">Ich werde</h4>
+              <h1 style="color: white; font-size:16vw;">40</h1>
+              <h1 style="color: white; font-size:6vw; z-index:1;margin-top: 5vh">Einladung</h1>
+              <p style="margin-top:0vh"></p>
+          </div>
 
-
-    <div class="row">
-      <div class="col-md-2">
-        <b>Rückmeldung?</b>
-        <br>
-      </div>
-      <div class="col-md-4">
-        Telefonisch / SMS / WhatsApp / Telegram / Signal<br>0151-70 30 45 48
-        <br>
-        <br>
-        <div>
           <div class="row">
-            <label for="fname" class="col-md-2">Name</label><p class="col-md-1"></p>
-            <input class="input-group-text col-md" type="text" id="fname" name="name"
-              placeholder="Gib deinen Namen ein">
+              <p>
+              <p>
+                  Im Rausch der Sinne, wild und frei,<br />
+                  vergisst man oft, wer man sonst sei.<br />
+                  Doch irgendwann, wenn alles schwankt,<br />
+                  fällt der Erste von der Bank.
+              </p>
+          </div>
+          <div class="">
+              <audio id="player"><source src="http://player.ffn.de/radiobollerwagen.mp3">Your browser seems not to support audio</audio>
+              <button class="btn btn-secondary" id="playerbtn" onclick="togglePlayer()">Spiele Radio Bollerwagen</button>
+          </div>
+          <div class="row">
+              <p></p>
+              <p>
+                  Am 11.06.2023 werde ich 40 und lade hiermit zur Feier ein:
+              </p>
+          </div>
+          <div class="row">
+              <div class="col-md-2">
+                  <b>Wann?</b>
+                  <br>
+              </div>
+              <div class="col-md-4">
+                  <p>
+                      24.06.2023 ab 18:00 Uhr
+                  </p>
+                  <p id="countdown"></p>
+              </div>
           </div>
           <br>
           <div class="row">
-            <label for="feedback" class="col-md-2">Feedback</label><p class="col-md-1"></p>
-            <input class="input-group-text col-md" type="text" id="feedback" name="feedback"
-              placeholder="Natürlich bin ich dabei!">
+              <div class="col-md-2">
+                  <b>Wo?</b>
+                  <br>
+              </div>
+              <div class="col-md-4">
+                  Grillhütte Eichenberg<br>Netra
+                  <br>
+                  <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                          src="https://www.openstreetmap.org/export/embed.html?bbox=10.076222419738771%2C51.07457159156011%2C10.145444869995119%2C51.098132188677035&amp;layer=mapnik&amp;marker=51.086353390250736%2C10.110855102539062"
+                          style="border: 1px solid black"></iframe>
+                  <br />
+                  <small>
+                      
+                          <a href="https://www.openstreetmap.org/?mlat=51.0864&amp;mlon=10.1109#map=15/51.0864/10.1108"
+                             style="margin-bottom:1vh" class="btn btn-primary">Karte Öffnen</a>
+                      <div> </div>
+                          <a href="https://www.ringgau.de/wohnen-leben/grillplaetze" style="margin-bottom:1vh" class="btn btn-primary">Grillplaetze Ringgau</a>
+                  </small>
+              </div>
           </div>
           <br>
+
           <div class="row">
-            <div class="col-md-2">
-              <p class="btn btn-primary">Senden</p>
-            </div>
+              <div class="col-md-2">
+                  <b>Rückmeldung?</b>
+                  <br>
+              </div>
+              <div class="col-md-4">
+                  Telefonisch / SMS / WhatsApp / Telegram / Signal<br>0151-70 30 45 48
+                  <br>
+                  <br>
+                  <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+                      <div>
+                          <div class="form-group">
+                              <label for="txtname">Name</label>
+                              <input type="text" class="form-control" id="txtname">
+                          </div>
+                          <div class="form-group">
+                              <label for="txtemail">Email (optional)</label>
+                              <input type="email" class="form-control" id="txtemail">
+                          </div>
+                          <div class="form-group">
+                              <label for="txtphone">Telefon (optional)</label>
+                              <input type="text" class="form-control" id="txtphone">
+                          </div>
+                          <div class="form-group">
+                              <label for="txtfeedback">Feedback</label>
+                              <textarea class="form-control" id="txtfeedback"></textarea>
+                          </div>
+                          <div class="form-group">
+                              <button class="form-control btn btn-primary" type="submit">Senden</button>
+                          </div>
+                      </div>
+                  </form>
+                  <br />
+              </div>
           </div>
-        </div>
+          <br>
+
+          <br>
+          <br>
+          <div IGNstyle="margin-left:20%; margin-right:20%; width: auto;">
+              <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="img/fuhrpark.jpg" class="d-block cimg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="img/IMG-20230415-WA0001.jpg" class="d-block cimg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="img/IMG-20230415-WA0003.jpg" class="d-block cimg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="img/IMG-20230415-WA0004.jpg" class="d-block cimg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="img/IMG-20230415-WA0005.jpg" class="d-block cimg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="img/IMG-20230415-WA0006.jpg" class="d-block cimg" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                          <img src="img/IMG-20230415-WA0007.jpg" class="d-block cimg" alt="...">
+                      </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
       </div>
-    </div>
-    <br>
-    <br>
-<div IGNstyle="margin-left:20%; margin-right:20%; width: auto;">
-    <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/fuhrpark.jpg" class="d-block cimg" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/IMG-20230415-WA0001.jpg" class="d-block cimg" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/IMG-20230415-WA0003.jpg" class="d-block cimg" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/IMG-20230415-WA0004.jpg" class="d-block cimg" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/IMG-20230415-WA0005.jpg" class="d-block cimg" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/IMG-20230415-WA0006.jpg" class="d-block cimg" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="img/IMG-20230415-WA0007.jpg" class="d-block cimg" alt="...">
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-<!--    <script>      $('.carousel').carousel()    </script>-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   <script>
     // Set the date we're counting down to
     var countDownDate = new Date("Jun 24, 2023 18:00:00").getTime();
@@ -165,9 +185,56 @@
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+      function togglePlayer() {
+          let player = document.getElementById("player");
+          let button = document.getElementById("playerbtn");
+          if (player.paused) {
+              button.innerHTML = "Stoppe Radio Bollerwagen";
+              player.play();
+          }
+          else {
+              player.pause();
+              button.innerHTML = "Spiele Radio Bollerwagen";
+          }
+          
       }
-    }, 1000);
-  </script>
+        function addItem() {
+            const txtphone = document.getElementById('txtphone');
+            const txtemail = document.getElementById('txtemail');
+            const txtfeedback= document.getElementById('txtfeedback');
+            const txtname = document.getElementById('txtname');
+
+            const item = {
+                name: txtname.value.trim(),
+                feedback: txtfeedback.value.trim(),
+                email: txtemail.value.trim(),
+                phone: txtphone.value.trim()
+            };
+            console.log(item);
+            let status = 0;
+            fetch('feedback', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(item)
+            })
+                .then(response => {
+                    status = response.status; 
+                    if (status == 200) {
+                        window.alert("Danke " + txtname.value.trim() + "! Feedback wurde übermittelt :)");
+                        txtname.value = '';
+                        txtfeedback.value = '';
+                        txtemail.value = '';
+                        txtphone.value = '';
+                    }
+                })
+                .catch(error => console.error('Unable to add item.', error));
+        }
+      </script>
 </body>
 
 </html>
