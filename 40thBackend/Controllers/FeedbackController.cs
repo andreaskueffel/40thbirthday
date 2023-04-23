@@ -31,5 +31,12 @@ namespace _40thBackend.Controllers
             
             //return new CreatedAtActionResult(nameof(Post), nameof(FeedbackController), null, null); 
         }
+        [HttpGet("visits")]
+        public ActionResult<IEnumerable<VisitorInfo>> Visits()
+        {
+            return new ActionResult<IEnumerable<VisitorInfo>>(_dbcontext.DB.GetCollection<VisitorInfo>().FindAll());
+
+            //return new CreatedAtActionResult(nameof(Post), nameof(FeedbackController), null, null); 
+        }
     }
 }
